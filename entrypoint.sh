@@ -108,8 +108,8 @@ if [ "$DIFF" != "" ]; then
     rsync -avzr --delete --exclude='.git/' --exclude='.git*' "$tmp_dir/" "$DESTINATION"
     debug "Committing and pushing changes"
     (
-      #git config user.name "$GIT_AUTHOR_NAME"
-      #git config user.email "$GIT_AUTHOR_EMAIL"
+      git config user.name "$GIT_AUTHOR_NAME"
+      git config user.email "$GIT_AUTHOR_EMAIL"
       
       # develop could have been modified by the time we get here, so pull before pushing
       # Maybe don't need if we checkout develop...
