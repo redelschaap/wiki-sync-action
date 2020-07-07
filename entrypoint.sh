@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function debug() {
-    echo "::debug file=${BASH_SOURCE[0]},line=${BASH_LINENO[0]}::$1"
+    echo "debug: file=${BASH_SOURCE[0]},line=${BASH_LINENO[0]}::$1"
 }
 
 function warning() {
