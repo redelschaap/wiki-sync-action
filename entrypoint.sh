@@ -64,7 +64,7 @@ if [ -z "$GITHUB_REPOSITORY" ]; then
     error "GITHUB_REPOSITORY environment variable is not set"
     exit 1
 fi
-GIT_REPOSITORY_URL="https://${GITHUB_PERSONAL_ACCESS_TOKEN}@github.com/$GITHUB_REPOSITORY.wiki.git"
+GIT_REPOSITORY_URL="https://${GIT_AUTHOR_NAME}:${GITHUB_PERSONAL_ACCESS_TOKEN}@github.com/$GITHUB_REPOSITORY.wiki.git"
 
 
 ###############################################################################
