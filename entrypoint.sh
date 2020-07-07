@@ -77,7 +77,9 @@ tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX)
   git init
   git config user.name "$GIT_AUTHOR_NAME"
   git config user.email "$GIT_AUTHOR_EMAIL"
-  git pull "$GIT_REPOSITORY_URL"
+  git remote add origin $GIT_REPOSITORY_URL
+  git fetch
+  git checkout master
 )
 
 ###############################################################################
